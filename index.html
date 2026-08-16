@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<title>أغلفة كراسات المواد الدراسية A4 - وش وضهر</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Fredoka:wght@700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<style>
+  @page {
+    size: A4 portrait;
+    margin: 0;
+  }
+  * {
+    box-sizing: border-box;
+    -webkit-print-color-adjust: exact;
+    print-color-adjust: exact;
+  }
+  body {
+    margin: 0;
+    padding: 0;
+    background: #e2e8f0;
+    font-family: 'Cairo', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .sheet {
+    width: 210mm;
+    height: 297mm;
+    page-break-after: always;
+    position: relative;
+    padding: 16mm;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    background: #ffffff;
+    overflow: hidden;
+  }
+
+  /* تنسيق بطاقة بيانات الطالب */
+  .student-box {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 18px 22px;
+    font-size: 20px;
+    font-weight: 700;
+    line-height: 2.2;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  }
+  .line-field {
+    display: flex;
+    align-items: center;
+  }
+  .dots {
+    flex-grow: 1;
+    border-bottom: 2px dotted #94a3b8;
+    margin-right: 12px;
+    height: 12px;
+  }
+
+  /* تنسيق منطقة الملاحظات في الظهر */
+  .back-box {
+    flex-grow: 1;
+    background: #ffffff;
+    border-radius: 14px;
+    padding: 20px;
+    margin: 20px 0;
+  }
+  .back-box h3 {
+    margin: 0 0 15px 0;
+    font-size: 24px;
+  }
+
+  /* تذييل الغلاف */
+  .footer {
+    text-align: center;
+    padding: 12px;
+    border-radius: 10px;
+  }
+  .footer h2 { margin: 0; font-size: 22px; }
+  .footer p { margin: 4px 0 0 0; font-size: 13px; font-weight: 700; }
+
+  /* ================= 1. اللغة العربية ================= */
+  .ar-border { border: 12px double #800000; }
+  .ar-title { font-size: 65px; font-weight: 900; color: #800000; margin: 10px 0; }
+
+  /* ================= 2. الرياضيات ================= */
+  .math-border { border: 12px solid #003366; }
+  .math-title { font-size: 68px; font-weight: 900; color: #003366; margin: 10px 0; }
+
+  /* ================= 3. العلوم ================= */
+  .sci-border { border: 12px solid #1e7e34; }
+  .sci-title { font-size: 68px; font-weight: 900; color: #1e7e34; margin: 10px 0; }
+
+  /* ================= 4. اللغة الإنجليزية ================= */
+  .en-front-border { border-left: 25px solid #4a148c; border-right: 6px solid #6a1b9a; }
+  .en-back-border { border-right: 25px solid #4a148c; border-left: 6px solid #6a1b9a; }
+  .en-title { font-family: 'Fredoka', cursive, sans-serif; font-size: 75px; color: #4a148c; margin: 0; }
+
+  /* ================= 5. الدراسات الاجتماعية ================= */
+  .soc-border { border: 12px solid #b26a00; }
+  .soc-title { font-size: 58px; font-weight: 900; color: #804d00; margin: 10px 0; }
+
+  /* ================= 6. الحاسب الآلي ================= */
+  .ict-border { border: 12px solid #0277bd; }
+  .ict-title { font-size: 62px; font-weight: 900; color: #0277bd; margin: 10px 0; }
+
+  /* ================= 7. التربية الدينية ================= */
+  .rel-border { border: 12px double #1b5e20; }
+  .rel-title { font-size: 62px; font-weight: 900; color: #1b5e20; margin: 10px 0; }
+
+  @media print {
+    body { background: none; }
+    .sheet { box-shadow: none; margin: 0; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- ================= 1. اللغة العربية (وش) ================= -->
+  <div class="sheet ar-border">
+    <div style="text-align: center; margin-top: 20px;">
+      <i class="fa-solid fa-feather-pointed" style="font-size: 45px; color: #800000;"></i>
+<h1 class="ar-title">اللغة العربية</h1>
+      <div style="font-size: 24px; color: #444; font-weight: bold;">لغتي هويتي وفخري</div>
+    </div>
+    <div class="student-box" style="border: 2px solid #800000;">
+      <div class="line-field">اسم الطالب: <span class="dots"></span></div>
+      <div class="line-field">الصف الدراسي: <span class="dots"></span></div>
+      <div class="line-field">المدرسة: <span class="dots"></span></div>
+    </div>
+  </div>
+  <!-- 1. اللغة العربية (ظهر) -->
+  <div class="sheet ar-border">
+    <div class="back-box" style="border: 2px dashed #800000;">
+      <h3 style="color: #800000;"><i class="fa-solid fa-pen-nib"></i> ملخصات وقواعد هامة:</h3>
+    </div>
+    <div class="footer" style="background: #800000; color: white;">
+      <h2 style="color: white;">مكتبة نايل - دسوق</h2><p style="color: #f8d7da;">تصميم: A.N</p>
+    </div>
+  </div>
+
+  <!-- ================= 2. الرياضيات (وش) ================= -->
+  <div class="sheet math-border">
+    <div style="text-align: center; margin-top: 20px;">
+      <div style="font-size: 45px; color: #003366; display: flex; justify-content: center; gap: 20px;">
+        <i class="fa-solid fa-calculator"></i><i class="fa-solid fa-shapes"></i><i class="fa-solid fa-square-root-variable"></i>
+      </div>
+      <h1 class="math-title">الرياضيات</h1>
+      <div style="font-size: 24px; color: #444; font-weight: bold;">عالم الأرقام والمنطق</div>
+    </div>
+    <div class="student-box" style="border: 2px solid #003366;">
+      <div class="line-field">اسم الطالب: <span class="dots"></span></div>
+      <div class="line-field">الصف الدراسي: <span class="dots"></span></div>
+      <div class="line-field">المدرسة: <span class="dots"></span></div>
+    </div>
+  </div>
+  <!-- 2. الرياضيات (ظهر) -->
+  <div class="sheet math-border">
+    <div class="back-box" style="border: 2px dashed #003366;">
+      <h3 style="color: #003366;"><i class="fa-solid fa-ruler-combined"></i> مسودات وقوانين هامة:</h3>
+    </div>
+    <div class="footer" style="background: #003366; color: white;">
+      <h2 style="color: white;">مكتبة نايل - دسوق</h2><p style="color: #d1ecf1;">تصميم: A.N</p>
+    </div>
+  </div>
+
+  <!-- ================= 3. العلوم (وش) ================= -->
+  <div class="sheet sci-border">
+    <div style="text-align: center; margin-top: 20px;">
+      <div style="font-size: 45px; color: #1e7e34; display: flex; justify-content: center; gap: 20px;">
+        <i class="fa-solid fa-flask"></i><i class="fa-solid fa-atom"></i><i class="fa-solid fa-dna"></i>
+      </div>
+      <h1 class="sci-title">العلوم</h1>
+      <div style="font-size: 24px; color: #444; font-weight: bold;">اكتشاف | تجارب | إبداع</div>
+    </div>
+    <div class="student-box" style="border: 2px solid #1e7e34;">
+      <div class="line-field">اسم الطالب: <span class="dots"></span></div>
+      <div class="line-field">الصف الدراسي: <span class="dots"></span></div>
+      <div class="line-field">المدرسة: <span class="dots"></span></div>
+    </div>
+  </div>
+  <!-- 3. العلوم (ظهر) -->
+  <div class="sheet sci-border">
+    <div class="back-box" style="border: 2px dashed #1e7e34;">
+      <h3 style="color: #1e7e34;"><i class="fa-solid fa-microscope"></i> جدول تجارب وملاحظات:</h3>
+    </div>
+    <div class="footer" style="background: #1e7e34; color: white;">
+      <h2 style="color: white;">مكتبة نايل - دسوق</h2><p style="color: #d4edda;">تصميم: A.N</p>
+    </div>
+  </div>
+
+  <!-- ================= 4. اللغة الإنجليزية (وش) ================= -->
+  <div class="sheet en-front-border" dir="ltr">
+    <div style="margin-top: 20px;">
+      <h1 class="en-title">ENGLISH</h1>
+      <div style="font-size: 22px; color: #4a148c; font-weight: bold; margin-top: 8px;">Mastering English Skills</div>
+      <div style="font-size: 45px; color: #6a1b9a; margin-top: 25px; display: flex; gap: 20px;">
+<i class="fa-solid fa-book-open"></i><i class="fa-solid fa-earth-americas"></i>
+      </div>
+    </div>
+    <div class="student-box" dir="ltr" style="border: 2px solid #4a148c;">
+      <div class="line-field">Student Name: <span class="dots" style="margin-right: 0; margin-left: 12px;"></span></div>
+      <div class="line-field">Grade / Class: <span class="dots" style="margin-right: 0; margin-left: 12px;"></span></div>
+      <div class="line-field">School: <span class="dots" style="margin-right: 0; margin-left: 12px;"></span></div>
+    </div>
+  </div>
+  <!-- 4. اللغة الإنجليزية (ظهر) -->
+  <div class="sheet en-back-border" dir="ltr">
+    <div class="back-box" style="border: 2px dashed #4a148c;">
+      <h3 style="color: #4a148c;"><i class="fa-solid fa-spell-check"></i> Vocabulary & Grammar:</h3>
+    </div>
+    <div class="footer" style="background: #4a148c; color: white; text-align: left; padding-left: 20px;">
+      <h2 style="color: white;">Nail Library - Desouk</h2><p style="color: #e1bee7;">Designed by: A.N</p>
+    </div>
+  </div>
+
+  <!-- ================= 5. الدراسات الاجتماعية (وش) ================= -->
+  <div class="sheet soc-border">
+    <div style="text-align: center; margin-top: 20px;">
+      <div style="font-size: 45px; color: #b26a00; display: flex; justify-content: center; gap: 20px;">
+        <i class="fa-solid fa-monument"></i><i class="fa-solid fa-compass"></i><i class="fa-solid fa-map-location-dot"></i>
+      </div>
+      <h1 class="soc-title">الدراسات الاجتماعية</h1>
+      <div style="font-size: 24px; color: #444; font-weight: bold;">تاريخ وحضارة مصر والعالم</div>
+    </div>
+    <div class="student-box" style="border: 2px solid #b26a00;">
+      <div class="line-field">اسم الطالب: <span class="dots"></span></div>
+      <div class="line-field">الصف الدراسي: <span class="dots"></span></div>
+      <div class="line-field">المدرسة: <span class="dots"></span></div>
+    </div>
+  </div>
+  <!-- 5. الدراسات الاجتماعية (ظهر) -->
+  <div class="sheet soc-border">
+    <div class="back-box" style="border: 2px dashed #b26a00;">
+      <h3 style="color: #804d00;"><i class="fa-solid fa-map"></i> مفاهيم ومواقع جغرافية:</h3>
+    </div>
+    <div class="footer" style="background: #b26a00; color: white;">
+      <h2 style="color: white;">مكتبة نايل - دسوق</h2><p style="color: #ffeeba;">تصميم: A.N</p>
+    </div>
+  </div>
+
+  <!-- ================= 6. الحاسب الآلي (وش) ================= -->
+  <div class="sheet ict-border">
+    <div style="text-align: center; margin-top: 20px;">
+      <div style="font-size: 45px; color: #0277bd; display: flex; justify-content: center; gap: 20px;">
+        <i class="fa-solid fa-laptop-code"></i><i class="fa-solid fa-microchip"></i><i class="fa-solid fa-network-wired"></i>
+      </div>
+      <h1 class="ict-title">الحاسب الآلي وتكنولوجيا المعلومات</h1>
+      <div style="font-size: 24px; color: #444; font-weight: bold;">التحول الرقمي والبرمجة</div>
+    </div>
+    <div class="student-box" style="border: 2px solid #0277bd;">
+      <div class="line-field">اسم الطالب: <span class="dots"></span></div>
+      <div class="line-field">الصف الدراسي: <span class="dots"></span></div>
+      <div class="line-field">المدرسة: <span class="dots"></span></div>
+    </div>
+  </div>
+  <!-- 6. الحاسب الآلي (ظهر) -->
+  <div class="sheet ict-border">
+    <div class="back-box" style="border: 2px dashed #0277bd;">
+      <h3 style="color: #0277bd;"><i class="fa-solid fa-code"></i> ملخصات تكنولوجية وعملية:</h3>
+    </div>
+    <div class="footer" style="background: #0277bd; color: white;">
+      <h2 style="color: white;">مكتبة نايل - دسوق</h2><p style="color: #b3e5fc;">تصميم: A.N</p>
+    </div>
+  </div>
+
+  <!-- ================= 7. التربية الدينية (وش) ================= -->
+  <div class="sheet rel-border">
+    <div style="text-align: center; margin-top: 20px;">
+<div style="font-size: 45px; color: #1b5e20; display: flex; justify-content: center; gap: 20px;">
+        <i class="fa-solid fa-book-quran"></i><i class="fa-solid fa-mosque"></i><i class="fa-solid fa-kaaba"></i>
+      </div>    
+      <h1 class="rel-title">التربية الدينية الإسلامية</h1>
+      <div style="font-size: 24px; color: #444; font-weight: bold;">الأخلاق والقيم والعبادات</div>
+    </div>
+    <div class="student-box" style="border: 2px solid #1b5e20;">
+      <div class="line-field">اسم الطالب: <span class="dots"></span></div>
+      <div class="line-field">الصف الدراسي: <span class="dots"></span></div>
+      <div class="line-field">المدرسة: <span class="dots"></span></div>
+    </div>
+  </div>
+  <!-- 7. التربية الدينية (ظهر) -->
+  <div class="sheet rel-border">
+    <div class="back-box" style="border: 2px dashed #1b5e20;">
+      <h3 style="color: #1b5e20;"><i class="fa-solid fa-star-and-crescent"></i> متابعة حفظ القرآن الكريم والعبادات:</h3>
+    </div>
+    <div class="footer" style="background: #1b5e20; color: white;">
+      <h2 style="color: white;">مكتبة نايل - دسوق</h2><p style="color: #c8e6c9;">تصميم: A.N</p>
+    </div>
+  </div>
+
+</body>
+</html>
